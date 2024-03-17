@@ -31,14 +31,40 @@ alias h='history | fzf'
 alias df='df -h'
 alias free='free -m'
 alias scr="cd ~/scripts"
+####New add 
+alias wifils="nmcli dev wifi list"
+alias chat="hexchat"
+alias rm='sudo \mv -ft $@ ~/.trash/' 
+alias empty-trash='sudo \rm -rf ~/.trash && mkdir ~/.trash'
+alias bashrcv="sudo vim ~/.bashrc"
+alias fim='vim $(fzf)'
+alias fixvivaldi="sudo find ~/ -type d -name GPUCache -exec rm -rf {} +"
+alias mnt="sudo mount /dev/sdb4 ./mounted"
+alias movies="sudo mount /dev/sdb4 ./mounted && cd ~/mounted/movies && lf"
+alias umnt="sudo umount /dev/sdb4 ./mounted"
+alias man="tldr"
+alias clock='tty-clock -cC 7 -f %d.%m.%y'
+alias yta='yt-dlp -x -f ba --embed-metadata --embed-thumbnail'
+alias aplay='mpv --no-video' 
+alias wifir="sudo systemctl stop NetworkManager && sudo systemctl start NetworkManager"
+alias myip="ip addr"	    
 
+# Git Shortcuts
+alias ga="git add"
+alias gc="git commit -m"
+alias gp="git push"
+alias gl="git log --oneline --decorate --graph"
+alias gcl="git clone"
 
+#alias "music"="ranger '/run/media/myuserid/Expansion/Videos/Music'"
+####old
 
 alias ll="ls -lh"
 alias lll="ls -la"
 alias lsdd="ls -ltr"
-alias rm="rm -i"
-alias mv="mv -iv"
+alias lsh="ls -d .?*"
+#alias rm="rm -i"
+#alias mv="mv -iv"
 alias desk='cd ~/Desktop'
 alias down='cd ~/Downloads'
 alias cp='cp -iv'
@@ -64,15 +90,15 @@ fi
 #
 #alias ls='ls --color=auto'
 alias freq='sudo auto-cpufreq --stats'
-alias i='doas pacman -S'
-alias r='doas pacman -R'
-alias u='doas pacman -Syy && sudo pacman -Syu'
-alias q='doas pacman -Sii'
+alias pi='doas pacman -S'
+alias pr='doas pacman -R'
+alias pu='doas pacman -Syy && sudo pacman -Syu'
+alias pq='doas pacman -Sii'
 alias s='doas pacman -Ss'
 alias grep='grep --color=auto'
 alias lf="lfrun"
-alias xl="libreoffice --calc"
-
+alias xl="sudo libreoffice --calc"
+alias t="~/scripts/timerunning"
 PS1='$(date +%H:%M)|\j|\W > '
 export PATH=$PATH:/home/latef/scripts/dwmbscripts
 export PATH=$PATH:/home/latef/scripts/
